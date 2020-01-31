@@ -1,0 +1,51 @@
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>PIF2019</title>
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet"> 
+  <style type="text/css">
+    @font-face { font-family:'Puchu-go'; src:url(Puchu_go-Regular.ttf); }
+    body { background-color: #000000; }
+    #pif { width:100%; margin:30px auto; padding:10px 5px; text-align:center; min-width:400px; max-width:800px; 
+           box-sizing:border-box; border:2px solid #fff; letter-spacing: 10px; }
+    #pif .pu { font-family: 'Puchu-go'; font-size:40px; margin-top:10px; color:#ffffff; }
+    #pif .jp { font-family: 'Sawarabi Mincho'; font-size:12px; color:#ffffff; }
+    #wrap { width:100%; margin:30px auto; text-align:center; min-width:400px; max-width:800px; }
+    #input  { width:100%; min-height:100px; margin-bottom:10px; padding:10px; resize:none; font-size:18px; font-family: 'Sawarabi Mincho'; }
+    #output { width:100%; text-align:left; min-width:400px; max-width:800px; min-height:150px; box-sizing:border-box; border:1px solid #ccc; 
+              background-color:#c8d5bb; padding:10px; font-family:Puchu-go,sans-serif; font-size:24px; }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58018873-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58018873-6');
+  </script>
+</head>
+<body>
+  <div id="pif">
+    <div class="pu">われらがつくりし</div><div class="jp">われらがつくりし</div>
+    <div class="pu">あいときぼうがあふれる</div><div class="jp">あいときぼうがあふれる</div>
+    <div class="pu">しあわせのほし</div><div class="jp">しあわせのほし</div>
+    <div class="pu">こどもたちがつけたなまえは</div><div class="jp">こどもたちがつけたなまえは</div>
+    <div class="pu">ちきゅう</div><div class="jp">ちきゅう</div>
+    <div class="pu">このほしがいつまでも</div><div class="jp">このほしがいつまでも</div>
+    <div class="pu">へいわであることをねがって</div><div class="jp">へいわであることをねがって</div>
+    <div class="pu">ぷわぷわをさずけよう</div><div class="jp">ぷわぷわをさずけよう</div>
+  </div>
+  <div id="wrap">
+    <textarea id="input">ぷちゅうじん いっぱい ふぇすてぃばる</textarea><div id="output">ぷちゅうじん いっぱい ふぇすてぃばる</div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $("#input").bind("keyup", function(){
+      var res=$(this).val(); var amp=/&/g; var lt=/</g; var gt=/>/g; var crlf = /\n/g;
+      res=res.replace(amp, "&amp;"); res=res.replace(lt, "&lt;"); res=res.replace(gt, "&gt;"); res=res.replace(crlf, ""); 
+      $("#output").html(res); 
+    });
+  </script>
+</body>
+</html>
