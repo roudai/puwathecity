@@ -1,6 +1,9 @@
 # Puwa the city
 われらがプワプワプーワプワワンマンライブ、PIF2019～プ宙人いっぱいフェスティバル～特設非公式サイト。
 
+公開URL
+https://roudai.github.io/puwathecity/
+
 ## フォントについて
 "Puchu_go-Regular.ttf"が、プ宙語フォントパッケージです。
 
